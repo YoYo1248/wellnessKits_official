@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>wellnesskits — Thoughtful Apps for Human Wellness</title>
-  <meta name="description" content="wellnesskits builds simple, delightful applications focused on healthy habits, mental clarity, and overall well-being.">
+  <title>WellnessKits — Science into daily practice.</title>
+  <meta name="description" content="WellnessKits: Science into daily practice. Small tools for a better life. Created to help everyday people live better lives through science-backed micro-tools.">
   <link rel="stylesheet" href="./src/style.css">
 </head>
 <body>
@@ -13,153 +13,134 @@
   <header class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="#" class="brand-logo">
-        <div class="logo-icon">wk</div>
-        <span>wellnesskits</span>
+        <span class="logo-text">WellnessKits</span>
       </a>
       
       <ul class="nav-links">
-        <li><a href="#apps">Apps</a></li>
-        <li><a href="#vision">Vision</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#story">Our Story</a></li>
         <li><a href="./support.html">Support</a></li>
+        <li><a href="mailto:contact@wellnesskits.app">Contact</a></li>
       </ul>
 
-      <a href="#apps" class="btn-primary">Explore Apps</a>
+      <a href="#tools" class="btn-warm-primary">Explore Tools</a>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero" id="hero">
     <div class="container hero-content">
-      <div class="tagline-badge">🌱 Wellness Driven Tech</div>
-      <h1>Simple tools for a<br><span class="highlight-text">healthier, balanced life.</span></h1>
-      <p class="subtitle">At <strong>wellnesskits</strong>, we create thoughtful, habit-building mobile apps designed to help you move more, think clearer, and live better every day.</p>
+      <div class="motto-badge">🌱 Science into daily practice.</div>
+      <h1 class="hero-title">Small tools for a<br><span class="warm-accent">better life.</span></h1>
+      <p class="hero-subtitle">
+        We transform scientific research into simple, intentional digital kits designed to help everyday people build better habits, gain clarity, and live well.
+      </p>
       
       <div class="hero-cta">
-        <a href="#apps" class="btn-primary">View Our Apps</a>
-        <a href="#vision" class="btn-secondary">Our Vision</a>
+        <a href="#tools" class="btn-warm-primary">Discover Our Tools</a>
+        <a href="#story" class="btn-warm-secondary">Read Our Story</a>
       </div>
     </div>
   </section>
 
-  <!-- Apps Section -->
-  <section class="section" id="apps">
+  <!-- Products / Tools Section -->
+  <section class="section tools-section" id="tools">
     <div class="container">
-      <div class="section-title">
-        <h2>Our Apps</h2>
-        <p>A suite of lightweight, intentional kits designed to support your daily wellness journey.</p>
+      <div class="section-header">
+        <h2>Our Tools</h2>
+        <p>Simple, science-inspired applications built to make positive change feel effortless.</p>
       </div>
 
-      <div class="apps-grid">
-        <!-- App 1: two moves -->
-        <div class="app-card featured">
-          <div class="app-card-badge">Available Now</div>
-          <div class="app-card-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
-            🏃‍♂️
+      <div class="tools-grid">
+        <!-- Product 1: Two Moves! -->
+        <div class="tool-card featured">
+          <div class="tool-header">
+            <span class="tool-tag status-active">Available</span>
+            <div class="tool-icon">🏃‍♂️</div>
           </div>
-          <h3>two moves</h3>
-          <p class="app-tagline">Build lasting movement habits, two steps at a time.</p>
-          <p class="app-desc">Designed to remove friction from daily exercise. Focus on consistent, bite-sized physical activities rather than overwhelming workouts.</p>
-          <div class="app-card-footer">
-            <span class="platform-tag">iOS & Android</span>
-            <button class="btn-sm" onclick="alert('two moves is available on the App Store & Google Play!')">Get App</button>
-          </div>
-        </div>
-
-        <!-- App 2: My Principles -->
-        <div class="app-card">
-          <div class="app-card-badge coming-soon">Next Kit</div>
-          <div class="app-card-icon" style="background: rgba(99, 102, 241, 0.15); color: #6366f1;">
-            💡
-          </div>
-          <h3>My Principles</h3>
-          <p class="app-tagline">Mindful reflection & personal decision framework.</p>
-          <p class="app-desc">A calm, distraction-free space to record your core principles, reflect on daily decisions, and align your actions with your values.</p>
-          <div class="app-card-footer">
-            <span class="platform-tag">In Development</span>
-            <span class="status-note">Coming Soon</span>
+          <h3 class="tool-name">Two Moves!</h3>
+          <p class="tool-tagline">Build a daily movement habit with two small movement sessions.</p>
+          <p class="tool-desc">
+            Rooted in behavioral science, Two Moves! removes friction from fitness. Instead of overwhelming workouts, build consistency with two bite-sized daily sessions that fit naturally into your routine.
+          </p>
+          <div class="tool-footer">
+            <span class="platform-info">iOS & Android</span>
+            <button class="btn-card" onclick="alert('Two Moves! is available for download.')">Get Two Moves!</button>
           </div>
         </div>
 
-        <!-- App 3: Future Kit -->
-        <div class="app-card placeholder">
-          <div class="app-card-icon" style="background: rgba(255, 255, 255, 0.05); color: #94a3b8;">
-            ✨
+        <!-- Product 2: My Principles -->
+        <div class="tool-card">
+          <div class="tool-header">
+            <span class="tool-tag status-upcoming">Coming later.</span>
+            <div class="tool-icon">💡</div>
           </div>
-          <h3>More Kits Ahead</h3>
-          <p class="app-tagline">Expanding your wellness toolkit.</p>
-          <p class="app-desc">We are continuously researching new ways to simplify sleep, mindfulness, and healthy routines.</p>
-          <div class="app-card-footer">
-            <span class="platform-tag">Future Releases</span>
+          <h3 class="tool-name">My Principles</h3>
+          <p class="tool-tagline">Build a personal principles library and use it when making decisions.</p>
+          <p class="tool-desc">
+            Inspired by decision framework research. A calm, reflective space to curate your core values, clarify your mental models, and make decisions with peace of mind.
+          </p>
+          <div class="tool-footer">
+            <span class="platform-info">In Development</span>
+            <span class="coming-note">Coming later.</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Vision & Principles Section -->
-  <section class="section vision-section" id="vision">
+  <!-- Our Story & Philosophy Section -->
+  <section class="section story-section" id="story">
     <div class="container">
-      <div class="section-title">
-        <h2>Our Vision</h2>
-        <p>Technology should enrich your well-being, not drain your attention.</p>
-      </div>
+      <div class="story-box">
+        <div class="story-badge">Warm & Science-Backed</div>
+        <h2>Why WellnessKits?</h2>
+        <p class="story-lead">
+          "I extract insights from scientific research and turn them into small, practical tools."
+        </p>
+        <p class="story-text">
+          As a non-technical creator leveraging modern AI, I created <strong>WellnessKits</strong> to bridge the gap between scientific studies and daily life. You don't need complicated systems or overwhelming routines to live better—just simple, science-backed micro-tools that work gently for everyday people.
+        </p>
 
-      <div class="vision-cards">
-        <div class="vision-box">
-          <div class="vision-icon">1</div>
-          <h3>Habit Over Intensity</h3>
-          <p>Small, consistent daily routines create long-term transformation. We build apps that encourage gentle consistency.</p>
-        </div>
-
-        <div class="vision-box">
-          <div class="vision-icon">2</div>
-          <h3>Intention & Clarity</h3>
-          <p>Our tools are clean, quiet, and distraction-free—designed to help you gain mental clarity and focus on what truly matters.</p>
-        </div>
-
-        <div class="vision-box">
-          <div class="vision-icon">3</div>
-          <h3>Holistic Well-being</h3>
-          <p>From physical activity like <em>two moves</em> to personal reflections in <em>My Principles</em>, we build a complete toolkit for your body and mind.</p>
+        <div class="story-pillars">
+          <div class="pillar-item">
+            <div class="pillar-num">01</div>
+            <h4>Science into Practice</h4>
+            <p>Every tool is inspired by scientific research on habits, psychology, and well-being.</p>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-num">02</div>
+            <h4>Small & Intentional</h4>
+            <p>Small tools for a better life. Designed to be lightweight and friction-free.</p>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-num">03</div>
+            <h4>For Everyday People</h4>
+            <p>Built with warmth and simplicity, helping everyday people live with more balance.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer id="about">
-    <div class="container footer-content">
-      <div class="footer-brand">
-        <div class="brand-logo" style="margin-bottom: 12px;">
-          <div class="logo-icon">wk</div>
-          <span>wellnesskits</span>
-        </div>
-        <p>Crafting intentional digital products for physical and mental wellness.</p>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand-area">
+        <span class="footer-logo">WellnessKits</span>
+        <p class="footer-motto">Science into daily practice. Small tools for a better life.</p>
       </div>
 
-      <div class="footer-links">
-        <div class="link-group">
-          <h4>Our Apps</h4>
-          <a href="#apps">two moves</a>
-          <a href="#apps">My Principles</a>
-        </div>
-        <div class="link-group">
-          <h4>Store Compliance</h4>
-          <a href="./privacy.html">Privacy Policy</a>
-          <a href="./terms.html">Terms of Service</a>
-          <a href="./support.html">App Support & Help</a>
-        </div>
+      <div class="footer-nav-links">
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <a href="./support.html">Support</a>
+        <a href="mailto:contact@wellnesskits.app">Contact</a>
       </div>
     </div>
-    <div class="container footer-bottom">
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
-        <p>&copy; 2026 wellnesskits. All rights reserved.</p>
-        <div style="display: flex; gap: 20px;">
-          <a href="./privacy.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.85rem;">Privacy Policy</a>
-          <a href="./terms.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.85rem;">Terms of Service</a>
-          <a href="./support.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.85rem;">Support</a>
-        </div>
-      </div>
+
+    <div class="container footer-copyright-area">
+      <p>&copy; 2026 WellnessKits. Developed by Shuang Chen.</p>
     </div>
   </footer>
 
