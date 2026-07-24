@@ -58,7 +58,7 @@ body {
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 24px 0;
+  padding: 20px 0;
   background: rgba(250, 248, 245, 0.9);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-subtle);
@@ -71,7 +71,19 @@ body {
 }
 
 .brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   text-decoration: none;
+}
+
+.nav-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--border-warm);
+  background: #fff;
 }
 
 .logo-text {
@@ -101,7 +113,7 @@ body {
 
 /* Hero Section */
 .hero {
-  padding: 180px 0 80px;
+  padding: 170px 0 70px;
   text-align: center;
 }
 
@@ -109,9 +121,11 @@ body {
   max-width: 680px;
 }
 
-.motto-badge {
-  display: inline-block;
-  padding: 6px 18px;
+.hero-author-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 18px 6px 10px;
   background: #eaf3ed;
   border: 1px solid #cce3d4;
   color: var(--warm-sage);
@@ -119,6 +133,14 @@ body {
   font-size: 0.88rem;
   font-weight: 700;
   margin-bottom: 24px;
+}
+
+.hero-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
 }
 
 .hero-title {
@@ -253,7 +275,7 @@ body {
 .footer-inner {
   display: flex;
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .footer-nav-links {
@@ -278,6 +300,19 @@ body {
   color: var(--text-muted);
   font-size: 0.88rem;
   font-weight: 500;
+}
+
+.footer-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 @media (max-width: 640px) {
