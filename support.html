@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Support & Help Center — wellnesskits</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <style>
+    .support-container {
+      max-width: 850px;
+      margin: 120px auto 80px;
+      padding: 0 24px;
+    }
+    .support-header { text-align: center; margin-bottom: 50px; }
+    .support-header h1 { font-size: 2.5rem; margin-bottom: 12px; }
+    .support-header p { color: var(--text-secondary); font-size: 1.1rem; }
+    
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .faq-item h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; color: var(--primary-green); }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; }
+    
+    .contact-box {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(22, 27, 38, 0.7));
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .contact-box h2 { font-size: 1.8rem; margin-bottom: 12px; }
+    .contact-box p { color: var(--text-secondary); margin-bottom: 24px; }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="./index.html" class="brand-logo">
+        <div class="logo-icon">wk</div>
+        <span>wellnesskits</span>
+      </a>
+      <a href="./index.html" class="btn-secondary">← Back to Home</a>
+    </div>
+  </header>
+
+  <div class="support-container">
+    <div class="support-header">
+      <h1>App Support & Help Center</h1>
+      <p>Need help with <strong>two moves</strong> or <strong>My Principles</strong>? We are here for you.</p>
+    </div>
+
+    <div class="faq-section">
+      <h2 style="font-size: 1.6rem; margin-bottom: 24px;">Frequently Asked Questions</h2>
+      
+      <div class="faq-item">
+        <h3>How does <em>two moves</em> sync my daily activity?</h3>
+        <p><em>two moves</em> uses native device Health integrations (Apple HealthKit / Google Fit) to log your movement effortlessly. All data is processed locally to protect your privacy.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is my data backed up securely?</h3>
+        <p>Yes. Your daily habit progress and principles reflections can be synced to your private iCloud or Google Account. We do not store your private notes on third-party servers.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I restore my purchase or subscription?</h3>
+        <p>Open the App Settings within <em>two moves</em> or <em>My Principles</em>, scroll to the Account section, and tap <strong>"Restore Purchases"</strong> to reactivate your access on any device linked to your Apple ID or Google account.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How can I request a new feature or report a bug?</h3>
+        <p>We love user feedback! Please send your feature ideas or bug descriptions directly to our support team email below. We reply to all inquiries within 24 hours.</p>
+      </div>
+    </div>
+
+    <div class="contact-box">
+      <h2>Still Have Questions?</h2>
+      <p>Our dedicated support team is ready to assist you with any app issues, feedback, or inquiry.</p>
+      <a href="mailto:support@wellnesskits.app" class="btn-primary" style="font-size: 1rem; padding: 12px 30px;">
+        ✉️ Contact Support (support@wellnesskits.app)
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 wellnesskits. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
