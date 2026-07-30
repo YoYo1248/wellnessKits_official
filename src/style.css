@@ -27,6 +27,12 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: var(--font-sans);
@@ -58,8 +64,8 @@ body {
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 20px 0;
-  background: rgba(250, 248, 245, 0.9);
+  padding: 16px 0;
+  background: rgba(250, 248, 245, 0.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -71,16 +77,22 @@ body {
 }
 
 .brand-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   text-decoration: none;
 }
 
-.brand-logo-icon {
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
+.nav-avatar {
+  width: 32px !important;
+  height: 32px !important;
+  max-width: 32px !important;
+  max-height: 32px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 1px solid var(--border-warm);
+  background: #fff;
+  flex-shrink: 0;
 }
 
 .logo-text {
@@ -129,7 +141,7 @@ body {
 
 /* Hero Section */
 .hero {
-  padding: 170px 0 70px;
+  padding: 160px 0 60px;
   text-align: center;
 }
 
@@ -152,11 +164,14 @@ body {
 }
 
 .hero-avatar {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 24px !important;
+  height: 24px !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
   background: #fff;
+  flex-shrink: 0;
 }
 
 .hero-title {
@@ -343,21 +358,19 @@ body {
 }
 
 .footer-avatar {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 22px !important;
+  height: 22px !important;
+  max-width: 22px !important;
+  max-height: 22px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  flex-shrink: 0;
 }
 
 /* Responsive Media Queries for Mobile Screens */
 @media (max-width: 768px) {
   .navbar {
-    padding: 16px 0;
-  }
-  
-  .brand-logo-icon {
-    width: 28px;
-    height: 28px;
+    padding: 14px 0;
   }
 
   .logo-text {
@@ -365,7 +378,7 @@ body {
   }
 
   .hero {
-    padding: 130px 0 50px;
+    padding: 120px 0 50px;
   }
 
   .hero-title {
