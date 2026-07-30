@@ -73,17 +73,14 @@ body {
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   text-decoration: none;
 }
 
-.nav-avatar {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1.5px solid var(--border-warm);
-  background: #fff;
+.brand-logo-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
 }
 
 .logo-text {
@@ -109,6 +106,25 @@ body {
 
 .nav-links a:hover {
   color: var(--warm-sage);
+}
+
+/* Buttons */
+.btn-warm-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-warm);
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.btn-warm-secondary:hover {
+  background: var(--bg-subtle);
 }
 
 /* Hero Section */
@@ -235,33 +251,51 @@ body {
   margin: 140px auto 80px;
   padding: 0 24px;
   line-height: 1.8;
+  width: 100%;
 }
 
-.legal-container h1 {
-  font-size: 2.5rem;
+.legal-container main {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.legal-container main h1 {
+  font-size: 2.6rem;
   font-weight: 800;
   margin-bottom: 8px;
+  line-height: 1.25;
 }
 
-.legal-container .update-date {
+.legal-container main h2 {
+  font-size: 1.35rem;
+  margin: 32px 0 12px;
+  color: var(--warm-sage);
+  line-height: 1.3;
+}
+
+.legal-container main p, 
+.legal-container main li {
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+.legal-container main ul {
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+
+.legal-container main a {
+  color: var(--warm-sage);
+  font-weight: 600;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.legal-container .updated {
   color: var(--text-light);
   font-size: 0.9rem;
   margin-bottom: 36px;
-}
-
-.legal-container h2 {
-  font-size: 1.3rem;
-  margin: 28px 0 12px;
-  color: var(--warm-sage);
-}
-
-.legal-container p, .legal-container li {
-  color: var(--text-muted);
-  margin-bottom: 14px;
-}
-
-.legal-container ul {
-  padding-left: 24px;
 }
 
 /* Footer */
@@ -315,8 +349,63 @@ body {
   object-fit: cover;
 }
 
-@media (max-width: 640px) {
-  .hero-title { font-size: 3rem; }
-  .nav-links { display: none; }
-  .tools-grid { grid-template-columns: 1fr; }
+/* Responsive Media Queries for Mobile Screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 0;
+  }
+  
+  .brand-logo-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .logo-text {
+    font-size: 1.15rem;
+  }
+
+  .hero {
+    padding: 130px 0 50px;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .legal-container {
+    margin: 100px auto 50px;
+    padding: 0 18px;
+  }
+
+  .legal-container main h1 {
+    font-size: 1.85rem;
+  }
+
+  .legal-container main h2 {
+    font-size: 1.2rem;
+    margin: 24px 0 10px;
+  }
+
+  .legal-container main p, 
+  .legal-container main li {
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .legal-container main ul {
+    padding-left: 20px;
+  }
+
+  .btn-warm-secondary {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
 }
