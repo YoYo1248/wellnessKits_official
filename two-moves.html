@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Moves! — Build a daily movement habit</title>
+  <meta name="description" content="Two Moves! helps you build a daily movement habit with two small movement sessions. Science-backed, friction-free exercise snacks.">
+  <link rel="icon" type="image/png" href="./avatar.png">
+  <link rel="stylesheet" href="./src/style.css">
+  <style>
+    .product-hero {
+      padding: 160px 0 70px;
+      text-align: center;
+    }
+    .product-badge {
+      display: inline-block;
+      padding: 6px 18px;
+      background: #eaf3ed;
+      border: 1px solid #cce3d4;
+      color: var(--warm-sage);
+      border-radius: 100px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .product-title {
+      font-size: 3.8rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -1.5px;
+      color: var(--text-main);
+    }
+    .product-tagline {
+      font-size: 1.25rem;
+      color: var(--warm-sage);
+      font-weight: 700;
+      max-width: 620px;
+      margin: 0 auto 20px;
+      line-height: 1.5;
+    }
+    .product-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto 36px;
+      line-height: 1.65;
+    }
+    .store-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+    .btn-store {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      background: var(--text-main);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.92rem;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    }
+    .btn-store:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      background: var(--warm-sage);
+    }
+    .btn-web {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      background: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid var(--border-warm);
+      font-weight: 700;
+      font-size: 0.92rem;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .btn-web:hover {
+      background: var(--bg-subtle);
+      transform: translateY(-2px);
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin: 40px 0 80px;
+    }
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+    }
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+    .feature-card h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--text-main);
+    }
+    .feature-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    @media (max-width: 640px) {
+      .product-title { font-size: 2.8rem; }
+      .product-hero { padding: 120px 0 40px; }
+      .store-buttons { flex-direction: column; width: 100%; }
+      .btn-store, .btn-web { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="./index.html" class="brand-logo">
+        <img src="./avatar.png" alt="Shuang Avatar" class="nav-avatar" style="width:32px;height:32px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+        <span class="logo-text">WellnessKits</span>
+      </a>
+      
+      <div style="display: flex; gap: 12px; align-items: center;">
+        <a href="./index.html" class="btn-warm-secondary">← Back to Home</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Hero Section -->
+  <section class="product-hero">
+    <div class="container">
+      <div class="product-badge">🏃‍♂️ Movement Habit App</div>
+      <h1 class="product-title">Two Moves!</h1>
+      <p class="product-tagline">Build a daily movement habit with two small movement sessions.</p>
+      <p class="product-desc">
+        Rooted in behavioral science, Two Moves! removes friction from exercise. Instead of overwhelming workouts, build long-term consistency with two gentle, bite-sized movement sessions that fit naturally into your day.
+      </p>
+
+      <!-- Store & App Links (Placeholders ready for URLs) -->
+      <div class="store-buttons">
+        <a href="#" class="btn-web" id="web-app-link" onclick="if(this.getAttribute('href')==='#'){alert('Web App version link coming soon!'); return false;}">
+          🌐 Launch Web App
+        </a>
+        <a href="#" class="btn-store" id="app-store-link" onclick="if(this.getAttribute('href')==='#'){alert('App Store link coming soon!'); return false;}">
+           App Store
+        </a>
+        <a href="#" class="btn-store" id="google-play-link" onclick="if(this.getAttribute('href')==='#'){alert('Google Play link coming soon!'); return false;}">
+          ▶ Google Play
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Features Section -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="section-header" style="text-align: center;">
+        <h2>Designed for Gentle Consistency</h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡️</div>
+          <h3>Two Small Sessions</h3>
+          <p>Divide your movement into two friction-free sessions each day. Small actions make habit formation effortless.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🧬</div>
+          <h3>Science-Backed</h3>
+          <p>Inspired by research on exercise snacks, habit loops, and physical well-being for everyday people.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>Optional AI Timers</h3>
+          <p>Convert your ideas into custom movement timers and structured routines with smart AI assistance.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Privacy-First</h3>
+          <p>Your history, timers, and progress stay securely on your device. No ads, no cross-app tracking.</p>
+        </div>
+      </div>
+
+      <!-- Quick Legal Links for App Store Submission -->
+      <div style="text-align: center; margin-top: 20px; padding: 24px; background: var(--bg-card); border: 1px solid var(--border-warm); border-radius: var(--radius-md);">
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">App Store Compliance & Legal Documentation:</p>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+          <a href="./privacy.html" style="color: var(--warm-sage); font-weight: 700; text-decoration: underline; font-size: 0.9rem;">Privacy Policy</a>
+          <a href="./terms.html" style="color: var(--warm-sage); font-weight: 700; text-decoration: underline; font-size: 0.9rem;">Terms of Service</a>
+          <a href="./support.html" style="color: var(--warm-sage); font-weight: 700; text-decoration: underline; font-size: 0.9rem;">App Support</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-nav-links">
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <a href="./support.html">Support</a>
+      </div>
+    </div>
+
+    <div class="container footer-copyright-area">
+      <div class="footer-credit">
+        <img src="./avatar.png" alt="Shuang" class="footer-avatar" style="width:22px;height:22px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+        <p>&copy; 2026 WellnessKits. Developed by Shuang.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
