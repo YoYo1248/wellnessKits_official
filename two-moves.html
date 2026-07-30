@@ -46,6 +46,8 @@
       margin: 0 auto 36px;
       line-height: 1.65;
     }
+    
+    /* Store & Web Buttons Style */
     .store-buttons {
       display: flex;
       justify-content: center;
@@ -54,43 +56,68 @@
       flex-wrap: wrap;
       margin-bottom: 50px;
     }
-    .btn-store {
+
+    /* Web App Button */
+    .btn-web-app {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 12px 24px;
-      background: var(--text-main);
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 0.92rem;
-      border-radius: 100px;
-      text-decoration: none;
-      transition: var(--transition);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-    }
-    .btn-store:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      gap: 12px;
+      padding: 9px 22px;
       background: var(--warm-sage);
-    }
-    .btn-web {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 24px;
-      background: var(--bg-card);
-      color: var(--text-main);
-      border: 1px solid var(--border-warm);
-      font-weight: 700;
-      font-size: 0.92rem;
-      border-radius: 100px;
+      color: #ffffff;
+      border-radius: 12px;
       text-decoration: none;
       transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(61, 110, 82, 0.25);
+      height: 52px;
     }
-    .btn-web:hover {
-      background: var(--bg-subtle);
+    .btn-web-app:hover {
       transform: translateY(-2px);
+      background: #315a42;
+      box-shadow: 0 8px 24px rgba(61, 110, 82, 0.35);
     }
+
+    /* Official Store Style Buttons */
+    .btn-store-official {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 22px;
+      background: #000000;
+      color: #ffffff;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: var(--transition);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+      height: 52px;
+    }
+    .btn-store-official:hover {
+      transform: translateY(-2px);
+      background: #1a1a1a;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    .btn-text-content {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+    .btn-text-small {
+      font-size: 0.65rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      line-height: 1;
+      opacity: 0.85;
+    }
+    .btn-text-large {
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.25;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    /* Features Grid */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -142,11 +169,9 @@
         width: 100%;
         gap: 12px;
       }
-      .btn-store, .btn-web {
+      .btn-store-official, .btn-web-app {
         width: 100%;
         justify-content: center;
-        padding: 12px 20px;
-        font-size: 0.9rem;
       }
       .features-grid {
         grid-template-columns: 1fr;
@@ -185,16 +210,44 @@
         Rooted in behavioral science, Two Moves! removes friction from exercise. Instead of overwhelming workouts, build long-term consistency with two gentle, bite-sized movement sessions that fit naturally into your day.
       </p>
 
-      <!-- Store & App Links (Placeholders ready for URLs) -->
+      <!-- Official Store & Web App Buttons -->
       <div class="store-buttons">
-        <a href="#" class="btn-web" id="web-app-link" onclick="if(this.getAttribute('href')==='#'){alert('Web App version link coming soon!'); return false;}">
-          🌐 Launch Web App
+        <!-- 1. Web App Button (Live Vercel Link) -->
+        <a href="https://two-moves.vercel.app/" target="_blank" rel="noopener" class="btn-web-app">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <div class="btn-text-content">
+            <span class="btn-text-small">Use in Browser</span>
+            <span class="btn-text-large">Launch Web App</span>
+          </div>
         </a>
-        <a href="#" class="btn-store" id="app-store-link" onclick="if(this.getAttribute('href')==='#'){alert('App Store link coming soon!'); return false;}">
-           App Store
+
+        <!-- 2. Apple App Store Official Badge Style -->
+        <a href="#" class="btn-store-official" id="app-store-link" onclick="if(this.getAttribute('href')==='#'){alert('App Store link coming soon upon official release!'); return false;}">
+          <svg width="22" height="24" viewBox="0 0 170 170" fill="currentColor">
+            <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.82.13-9.67-1.94-14.54-6.22-3.21-2.76-7.07-7.44-11.58-14.04-6.42-9.39-11.45-19.86-15.08-31.42-3.63-11.56-5.45-22.38-5.45-32.46 0-14.88 3.84-27.16 11.52-36.83 7.68-9.67 17.27-14.57 28.77-14.7 5.09 0 10.45 1.25 16.08 3.75 5.63 2.5 9.77 3.75 12.43 3.75 2.18 0 6.13-1.2 11.85-3.61 5.72-2.4 10.8-3.5 15.24-3.3 11.25.5 20.35 4.7 27.31 12.6-9.92 6.01-14.77 14.57-14.54 25.68.23 8.65 3.42 16.02 9.58 22.11 6.16 6.09 13.58 9.55 22.27 10.37-2.39 7.02-5.49 14.03-9.29 21.03zM119.22 31.7c0-7.39 2.68-14.39 8.04-21 5.36-6.61 12.16-10.48 20.4-11.6.46 1.06.69 2.19.69 3.39 0 7.39-2.75 14.49-8.25 21.3-5.5 6.81-12.33 10.63-20.5 11.46-.11-1.07-.38-2.25-.38-3.55z"/>
+          </svg>
+          <div class="btn-text-content">
+            <span class="btn-text-small">Download on the</span>
+            <span class="btn-text-large">App Store</span>
+          </div>
         </a>
-        <a href="#" class="btn-store" id="google-play-link" onclick="if(this.getAttribute('href')==='#'){alert('Google Play link coming soon!'); return false;}">
-          ▶ Google Play
+
+        <!-- 3. Google Play Store Official Badge Style -->
+        <a href="#" class="btn-store-official" id="google-play-link" onclick="if(this.getAttribute('href')==='#'){alert('Google Play link coming soon upon official release!'); return false;}">
+          <svg width="22" height="24" viewBox="0 0 512 512">
+            <path fill="#41A5EE" d="M380.9 297.8L93.6 463.6c-18.7 10.8-41.6-2.7-41.6-24.3V72.7c0-21.6 22.9-35.1 41.6-24.3l287.3 165.8c18.7 10.8 18.7 72.8 0 83.6z"/>
+            <path fill="#02D775" d="M298.7 256L82.1 472.6c5.7 3.4 12.7 3.8 18.8.3l280-161.7-82.2-55.2z"/>
+            <path fill="#FF3A44" d="M298.7 256L380.9 200.8 100.9 39.1c-6.1-3.5-13.1-3.1-18.8.3L298.7 256z"/>
+            <path fill="#FCA204" d="M430.7 232.7l-49.8-28.7-82.2 52 82.2 52 49.8-28.7c13.4-7.7 13.4-38.9 0-46.6z"/>
+          </svg>
+          <div class="btn-text-content">
+            <span class="btn-text-small">GET IT ON</span>
+            <span class="btn-text-large">Google Play</span>
+          </div>
         </a>
       </div>
     </div>
