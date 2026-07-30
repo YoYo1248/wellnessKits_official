@@ -74,6 +74,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
 }
 
 .brand-logo {
@@ -81,6 +82,7 @@ body {
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .nav-avatar {
@@ -100,12 +102,15 @@ body {
   font-weight: 800;
   letter-spacing: -0.5px;
   color: var(--text-main);
+  white-space: nowrap;
 }
 
 .nav-links {
   display: flex;
-  gap: 28px;
+  gap: 24px;
   list-style: none;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 .nav-links a {
@@ -114,6 +119,7 @@ body {
   font-size: 0.95rem;
   font-weight: 600;
   transition: var(--transition);
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -133,6 +139,8 @@ body {
   border-radius: 100px;
   text-decoration: none;
   transition: var(--transition);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .btn-warm-secondary:hover {
@@ -369,24 +377,45 @@ body {
 
 /* Responsive Media Queries for Mobile Screens */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
   .navbar {
-    padding: 14px 0;
+    padding: 12px 0;
+  }
+
+  .nav-container {
+    gap: 8px;
+  }
+
+  .nav-avatar {
+    width: 28px !important;
+    height: 28px !important;
   }
 
   .logo-text {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
   }
 
   .hero {
-    padding: 120px 0 50px;
+    padding: 110px 0 40px;
   }
 
   .hero-title {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 
   .hero-subtitle {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 
   .tools-grid {
@@ -394,31 +423,31 @@ body {
   }
 
   .legal-container {
-    margin: 100px auto 50px;
-    padding: 0 18px;
+    margin: 90px auto 40px;
+    padding: 0 16px;
   }
 
   .legal-container main h1 {
-    font-size: 1.85rem;
+    font-size: 1.75rem;
   }
 
   .legal-container main h2 {
-    font-size: 1.2rem;
-    margin: 24px 0 10px;
+    font-size: 1.15rem;
+    margin: 20px 0 8px;
   }
 
   .legal-container main p, 
   .legal-container main li {
-    font-size: 0.92rem;
-    line-height: 1.65;
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
 
   .legal-container main ul {
-    padding-left: 20px;
+    padding-left: 18px;
   }
 
   .btn-warm-secondary {
-    padding: 6px 14px;
-    font-size: 0.8rem;
+    padding: 5px 12px;
+    font-size: 0.78rem;
   }
 }
