@@ -1,13 +1,23 @@
-// wellnesskits official website script
+import './style.css';
+import { initI18n } from './i18n.js';
 
-const navbar = document.getElementById('navbar');
+document.addEventListener('DOMContentLoaded', () => {
+  initI18n();
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 40) {
-    navbar.style.background = 'rgba(12, 15, 23, 0.95)';
-    navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
-  } else {
-    navbar.style.background = 'rgba(12, 15, 23, 0.8)';
-    navbar.style.boxShadow = 'none';
-  }
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
 });
