@@ -12,10 +12,10 @@ export const translations = {
 
     // Hero Section
     motto: "Knowledge into daily practice.",
-    hero_subtitle: "Small tools for a better life.",
+    hero_subtitle: "Small kits for a better life.",
 
     // Creator Note
-    creator_quote: "“As an independent creator, my goal is simple: if my tools can make your day a little brighter or healthier, I couldn't be happier.”",
+    creator_quote: "“As an independent creator, my goal is simple: if my kits can make your day a little brighter or healthier, I couldn't be happier.”",
     creator_author: "— Shuang, Creator of WellnessKits",
 
     // Tools / Kits Matrix
@@ -68,10 +68,10 @@ export const translations = {
 
     // Hero Section
     motto: "知行合一，躬行不辍。",
-    hero_subtitle: "小工具，大生活。",
+    hero_subtitle: "小工具箱，大生活。",
 
     // Creator Note
-    creator_quote: "“作为一个独立创作者，我的愿景很简单：如果我做得这些小工具能让你的生活好一点点，我就非常开心了。”",
+    creator_quote: "“作为一个独立创作者，我的愿景很简单：如果我做得这些小工具箱能让你的生活好一点点，我就非常开心了。”",
     creator_author: "— Shuang，WellnessKits 创作者",
 
     // Tools / Kits Matrix
@@ -124,10 +124,10 @@ export const translations = {
 
     // Hero Section
     motto: "知行合一，躬行不輟。",
-    hero_subtitle: "小工具，大生活。",
+    hero_subtitle: "小工具箱，大生活。",
 
     // Creator Note
-    creator_quote: "“作為一個獨立創作者，我的願景很簡單：如果我做得這些小工具能讓你的生活好一點點，我就非常開心了。”",
+    creator_quote: "“作為一個獨立創作者，我的願景很簡單：如果我做得這些小工具箱能讓你的生活好一點點，我就非常開心了。”",
     creator_author: "— Shuang，WellnessKits 創作者",
 
     // Tools / Kits Matrix
@@ -180,10 +180,10 @@ export const translations = {
 
     // Hero Section
     motto: "Del conocimiento a la práctica diaria.",
-    hero_subtitle: "Pequeñas herramientas para una vida mejor.",
+    hero_subtitle: "Pequeños kits para una vida mejor.",
 
     // Creator Note
-    creator_quote: "“Como creador independiente, mi objetivo es simple: si mis herramientas pueden hacer tu día un poco más saludable o feliz, no podría estar más contento.”",
+    creator_quote: "“Como creador independiente, mi objetivo es simple: si mis kits pueden hacer tu día un poco más saludable o feliz, no podría estar más contento.”",
     creator_author: "— Shuang, Creador de WellnessKits",
 
     // Tools / Kits Matrix
