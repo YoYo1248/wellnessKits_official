@@ -4,7 +4,7 @@
 export const translations = {
   en: {
     // Navigation
-    nav_tools: "Tools",
+    nav_tools: "Kits",
     nav_privacy: "Privacy",
     nav_terms: "Terms",
     nav_support: "Support",
@@ -18,8 +18,8 @@ export const translations = {
     creator_quote: "“As an independent creator, my goal is simple: if my tools can make your day a little brighter or healthier, I couldn't be happier.”",
     creator_author: "— Shuang, Creator of WellnessKits",
 
-    // Tools Matrix
-    tools_heading: "Tools",
+    // Tools / Kits Matrix
+    tools_heading: "Kits",
     twomoons_name: "Two Moves!",
     twomoons_tag: "View App →",
     twomoons_desc: "Build a daily movement habit with two small movement sessions.",
@@ -60,7 +60,7 @@ export const translations = {
 
   "zh-CN": {
     // Navigation
-    nav_tools: "工具矩阵",
+    nav_tools: "工具箱",
     nav_privacy: "隐私政策",
     nav_terms: "服务条款",
     nav_support: "客户支持",
@@ -74,8 +74,8 @@ export const translations = {
     creator_quote: "“作为一个独立创作者，我的愿景很简单：如果我做得这些小工具能让你的生活好一点点，我就非常开心了。”",
     creator_author: "— Shuang，WellnessKits 创作者",
 
-    // Tools Matrix
-    tools_heading: "小工具矩阵",
+    // Tools / Kits Matrix
+    tools_heading: "工具箱",
     twomoons_name: "Two Moves!",
     twomoons_tag: "访问 Web App →",
     twomoons_desc: "通过两次微运动，轻松养成每日运动好习惯。",
@@ -116,7 +116,7 @@ export const translations = {
 
   "zh-TW": {
     // Navigation
-    nav_tools: "工具矩陣",
+    nav_tools: "工具箱",
     nav_privacy: "隱私政策",
     nav_terms: "服務條款",
     nav_support: "客戶支援",
@@ -130,8 +130,8 @@ export const translations = {
     creator_quote: "“作為一個獨立創作者，我的願景很簡單：如果我做得這些小工具能讓你的生活好一點點，我就非常開心了。”",
     creator_author: "— Shuang，WellnessKits 創作者",
 
-    // Tools Matrix
-    tools_heading: "小工具矩陣",
+    // Tools / Kits Matrix
+    tools_heading: "工具箱",
     twomoons_name: "Two Moves!",
     twomoons_tag: "造訪 Web App →",
     twomoons_desc: "透過兩次微運動，輕鬆養成每日運動好習慣。",
@@ -172,7 +172,7 @@ export const translations = {
 
   es: {
     // Navigation
-    nav_tools: "Herramientas",
+    nav_tools: "Kits",
     nav_privacy: "Privacidad",
     nav_terms: "Términos",
     nav_support: "Soporte",
@@ -186,8 +186,8 @@ export const translations = {
     creator_quote: "“Como creador independiente, mi objetivo es simple: si mis herramientas pueden hacer tu día un poco más saludable o feliz, no podría estar más contento.”",
     creator_author: "— Shuang, Creador de WellnessKits",
 
-    // Tools Matrix
-    tools_heading: "Herramientas",
+    // Tools / Kits Matrix
+    tools_heading: "Kits",
     twomoons_name: "Two Moves!",
     twomoons_tag: "Ver App →",
     twomoons_desc: "Crea el hábito de moverte a diario con dos pequeñas sesiones de ejercicio.",
