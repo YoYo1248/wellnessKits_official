@@ -1,0 +1,20 @@
+<svg width="64" height="40" viewBox="0 0 64 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sageAmberGrad" x1="0" y1="20" x2="64" y2="20" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3D6E52"/>
+      <stop offset="45%" stop-color="#4E8767"/>
+      <stop offset="55%" stop-color="#E29253"/>
+      <stop offset="100%" stop-color="#D97736"/>
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="130%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#2B2725" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#subtleShadow)">
+    <!-- Perfectly Symmetric 1:1 Möbius Loop -->
+    <path d="M 21 10 C 13 10 11 30 21 30 C 29 30 35 10 43 10 C 51 10 53 30 43 30 C 35 30 29 10 21 10 Z" stroke="url(#sageAmberGrad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Top Overlap Ribbon Cut for Depth -->
+    <path d="M 43 10 C 51 10 53 30 43 30 C 37 30 32 20 28 17" stroke="url(#sageAmberGrad)" stroke-width="4.5" stroke-linecap="round"/>
+  </g>
+</svg>

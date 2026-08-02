@@ -13,7 +13,8 @@ export default defineConfig({
         twoMoves: resolve(__dirname, 'two-moves.html'),
         privacy: resolve(__dirname, 'privacy.html'),
         terms: resolve(__dirname, 'terms.html'),
-        support: resolve(__dirname, 'support.html')
+        support: resolve(__dirname, 'support.html'),
+        logoPreview: resolve(__dirname, 'logo-preview.html')
       }
     }
   }

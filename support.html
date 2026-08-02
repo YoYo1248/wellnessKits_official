@@ -3,30 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support & FAQ — WellnessKits</title>
+  <title>WellnessKits Support & Help Center</title>
+  <meta name="description" content="Official support center and contact information for WellnessKits applications.">
+  <link rel="icon" type="image/png" href="./logo.png">
   <link rel="stylesheet" href="./src/style.css">
   <style>
-    .support-box {
-      max-width: 800px;
-      margin: 140px auto 80px;
-      padding: 0 24px;
-    }
-    .faq-card {
+    .support-card {
       background: var(--bg-card);
-      border: 1px solid var(--border-warm);
-      border-radius: var(--radius-md);
-      padding: 24px;
-      margin-bottom: 20px;
-    }
-    .faq-card h3 { color: var(--warm-sage); margin-bottom: 8px; font-size: 1.2rem; }
-    .faq-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
-    .contact-card {
-      background: var(--bg-subtle);
       border: 1px solid var(--border-warm);
       border-radius: var(--radius-lg);
       padding: 40px;
-      text-align: center;
       margin-top: 40px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+    }
+    .support-item {
+      margin-bottom: 28px;
+    }
+    .support-item h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--warm-sage);
+      margin-bottom: 8px;
+    }
+    .support-item p {
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .support-item a {
+      color: var(--warm-sage);
+      font-weight: 600;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -34,40 +40,50 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="./index.html" class="brand-logo">
+        <img src="./logo.png" alt="WellnessKits Logo" class="brand-logo-img">
         <span class="logo-text">WellnessKits</span>
       </a>
       <a href="./index.html" class="btn-warm-secondary">← Back to Home</a>
     </div>
   </header>
 
-  <div class="support-box">
-    <div style="text-align: center; margin-bottom: 40px;">
-      <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 10px;">Support & Help Center</h1>
-      <p style="color: var(--text-muted);">Have questions about <strong>Two Moves!</strong> or <strong>My Principles</strong>? We are here to help.</p>
-    </div>
+  <div class="legal-container">
+    <main>
+      <h1>WellnessKits Support Center</h1>
+      <p class="updated">We are here to help you get the most out of our applications.</p>
 
-    <div class="faq-card">
-      <h3>How does Two Moves! help me build a habit?</h3>
-      <p>Two Moves! breaks physical exercise down into two small, friction-free daily movement sessions, leveraging behavioral science so habit formation feels natural and easy.</p>
-    </div>
+      <div class="support-card">
+        <div class="support-item">
+          <h3>📬 Customer Support & Inquiries</h3>
+          <p>For any questions, feedback, bug reports, or feature requests, please reach out to us at:</p>
+          <p><a href="mailto:support.wellnesskits@gmail.com">support.wellnesskits@gmail.com</a></p>
+        </div>
 
-    <div class="faq-card">
-      <h3>What is My Principles about?</h3>
-      <p>My Principles lets you build a personalized decision framework and library, helping you make mindful, value-aligned choices with clarity.</p>
-    </div>
+        <div class="support-item">
+          <h3>💳 Subscriptions & Refunds</h3>
+          <p>
+            Subscriptions for WellnessKits applications (including Two Moves Pro) are managed directly by Apple.
+            You can view, change, or cancel your subscriptions at any time via your iOS Settings &gt; Apple ID &gt; Subscriptions.
+          </p>
+        </div>
 
-    <div class="contact-card">
-      <h2 style="font-size: 1.8rem; margin-bottom: 10px;">Get in Touch</h2>
-      <p style="color: var(--text-muted); margin-bottom: 20px;">Feel free to reach out with any questions, feedback, or support requests.</p>
-      <a href="mailto:support.wellnesskits@gmail.com" class="btn-warm-primary">
-        ✉️ Contact Support (support.wellnesskits@gmail.com)
-      </a>
-    </div>
+        <div class="support-item">
+          <h3>🔒 Privacy & Data Rights</h3>
+          <p>
+            Most of your app data stays on your local device. To learn more about how we handle data or to exercise your privacy rights, please read our 
+            <a href="./privacy.html">Privacy Policy</a>.
+          </p>
+        </div>
+      </div>
+    </main>
   </div>
 
   <footer class="footer">
     <div class="container footer-copyright-area">
-      <p>&copy; 2026 WellnessKits. Developed by Shuang.</p>
+      <div class="footer-credit">
+        <img src="./avatar.png" alt="Shuang" class="footer-avatar" style="width:22px;height:22px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+        <p>&copy; 2026 WellnessKits. Developed by Shuang.</p>
+      </div>
     </div>
   </footer>
 </body>

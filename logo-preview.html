@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WellnessKits — Perfectly Balanced 3D Möbius Logo</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <style>
+    body {
+      background: #faf8f5;
+      padding: 50px 20px 100px;
+    }
+    .preview-header {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 50px;
+    }
+    .preview-header h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 12px;
+    }
+    .preview-header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    .main-render-card {
+      background: #ffffff;
+      border: 1px solid var(--border-warm);
+      border-radius: 28px;
+      padding: 50px;
+      max-width: 840px;
+      margin: 0 auto;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+    }
+    .canvas-container {
+      width: 380px;
+      height: 260px;
+      margin: 0 auto 30px;
+      position: relative;
+    }
+    canvas {
+      width: 100%;
+      height: 100%;
+      border-radius: 28px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.06);
+      background: linear-gradient(145deg, #ffffff 0%, #f7f3ec 100%);
+    }
+    .navbar-live-test {
+      background: rgba(250, 248, 245, 0.95);
+      border: 1px solid var(--border-warm);
+      border-radius: 100px;
+      padding: 12px 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 30px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preview-header">
+    <h1>莫比乌斯环 (1:1 绝对正面对称调平版)</h1>
+    <p>矫正了透视斜角，将左侧绿环（知）与右侧金环（行）调平为 **1:1 绝对完全等大**：</p>
+  </div>
+
+  <div class="main-render-card">
+    <div class="canvas-container">
+      <canvas id="mobiusCanvas" width="760" height="520"></canvas>
+    </div>
+
+    <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 12px;">【1:1 完全对称 · 知行同权莫比乌斯环】</h2>
+    <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 20px; font-size: 1rem; line-height: 1.65;">
+      矫正了 Y 轴透视偏角，使左侧深绿（Knowledge 知识）与右侧暖金（Practice 行动）在视野中达到像素级的 1:1 完全对称与同等权重，保留了高保真丝绸缎面的金属光泽。
+    </p>
+
+    <!-- Header Live Preview -->
+    <div>
+      <p style="font-size: 0.88rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Header Navbar Live Mockup</p>
+      <div class="navbar-live-test">
+        <canvas id="miniMobius" width="96" height="64" style="width: 48px; height: 32px; box-shadow: none; background: transparent;"></canvas>
+        <span style="font-size: 1.25rem; font-weight: 800; color: var(--text-main);">WellnessKits</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Perfectly Balanced 1:1 Symmetric 3D Möbius Strip Renderer
+    function renderSymmetric3DMobius(canvasId, isMini = false) {
+      const canvas = document.getElementById(canvasId);
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width;
+      const h = canvas.height;
+      const cx = w / 2;
+      const cy = h / 2;
+
+      ctx.clearRect(0, 0, w, h);
+
+      // Background styling
+      if (!isMini) {
+        const bgGrad = ctx.createRadialGradient(cx, cy, 80, cx, cy, w/1.2);
+        bgGrad.addColorStop(0, '#ffffff');
+        bgGrad.addColorStop(1, '#f7f3ec');
+        ctx.fillStyle = bgGrad;
+        ctx.beginPath();
+        ctx.roundRect(0, 0, w, h, 56);
+        ctx.fill();
+      }
+
+      // Parameters
+      const R = w * (isMini ? 0.22 : 0.21);
+      const wWidth = w * (isMini ? 0.08 : 0.065);
+      const uSteps = 450;
+      const vSteps = 16;
+      
+      const points = [];
+
+      // Generate Perfectly Symmetric 3D Parametric Points
+      for (let i = 0; i < uSteps; i++) {
+        const u = (i / uSteps) * Math.PI * 2;
+        const uDeg = (i / uSteps);
+        
+        for (let j = 0; j <= vSteps; j++) {
+          const v = ((j / vSteps) - 0.5) * wWidth;
+          
+          // Parametric Mobius Strip Equations
+          const x = (R + v * Math.cos(u / 2)) * Math.cos(u);
+          const y = (R + v * Math.cos(u / 2)) * Math.sin(u);
+          const z = v * Math.sin(u / 2);
+
+          // Zero Y-rotation for exact 1:1 Left-Right Symmetry
+          const rotX = 0.52; // Pure X tilt for frontal symmetry
+          const rotY = 0.00; // ZERO Y-tilt so Left and Right loops are IDENTICAL in size
+
+          // Rotation
+          const y1 = y * Math.cos(rotX) - z * Math.sin(rotX);
+          const z1 = y * Math.sin(rotX) + z * Math.cos(rotX);
+
+          const x2 = x * Math.cos(rotY) + z1 * Math.sin(rotY);
+          const z2 = -x * Math.sin(rotY) + z1 * Math.cos(rotY);
+
+          // Orthographic / Balanced Projection for 1:1 Equal Dimensions
+          const px = cx + x2;
+          const py = cy + y1;
+
+          // Color interpolation (Deep Sage Green -> Amber Gold)
+          let r, g, b;
+          if (uDeg < 0.5) {
+            const t = uDeg * 2;
+            r = Math.round(42 * (1-t) + 225 * t);
+            g = Math.round(85 * (1-t) + 125 * t);
+            b = Math.round(58 * (1-t) + 40 * t);
+          } else {
+            const t = (uDeg - 0.5) * 2;
+            r = Math.round(225 * (1-t) + 42 * t);
+            g = Math.round(125 * (1-t) + 85 * t);
+            b = Math.round(40 * (1-t) + 58 * t);
+          }
+
+          // Shading based on normal and depth
+          const brightness = Math.min(1.2, Math.max(0.72, 0.95 + (z2 / (R * 1.8))));
+          r = Math.min(255, Math.round(r * brightness));
+          g = Math.min(255, Math.round(g * brightness));
+          b = Math.min(255, Math.round(b * brightness));
+
+          points.push({
+            px, py, z2,
+            color: `rgb(${r}, ${g}, ${b})`,
+            uDeg
+          });
+        }
+      }
+
+      // Painter's algorithm for Z-sorting
+      const quads = [];
+      for (let i = 0; i < uSteps - 1; i++) {
+        for (let j = 0; j < vSteps; j++) {
+          const idx1 = i * (vSteps + 1) + j;
+          const idx2 = idx1 + 1;
+          const idx3 = (i + 1) * (vSteps + 1) + j + 1;
+          const idx4 = (i + 1) * (vSteps + 1) + j;
+
+          const avgZ = (points[idx1].z2 + points[idx2].z2 + points[idx3].z2 + points[idx4].z2) / 4;
+
+          quads.push({
+            p1: points[idx1],
+            p2: points[idx2],
+            p3: points[idx3],
+            p4: points[idx4],
+            z: avgZ,
+            color: points[idx1].color
+          });
+        }
+      }
+
+      quads.sort((a, b) => a.z - b.z);
+
+      // Render Quads with Soft Metallic Ambient Shadow
+      quads.forEach(q => {
+        if (!isMini) {
+          ctx.fillStyle = 'rgba(43, 39, 37, 0.025)';
+          ctx.beginPath();
+          ctx.moveTo(q.p1.px, q.p1.py + 16);
+          ctx.lineTo(q.p2.px, q.p2.py + 16);
+          ctx.lineTo(q.p3.px, q.p3.py + 16);
+          ctx.lineTo(q.p4.px, q.p4.py + 16);
+          ctx.closePath();
+          ctx.fill();
+        }
+
+        ctx.fillStyle = q.color;
+        ctx.strokeStyle = q.color;
+        ctx.lineWidth = isMini ? 1.4 : 1.2;
+        ctx.beginPath();
+        ctx.moveTo(q.p1.px, q.p1.py);
+        ctx.lineTo(q.p2.px, q.p2.py);
+        ctx.lineTo(q.p3.px, q.p3.py);
+        ctx.lineTo(q.p4.px, q.p4.py);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+      });
+    }
+
+    window.onload = () => {
+      renderSymmetric3DMobius('mobiusCanvas', false);
+      renderSymmetric3DMobius('miniMobius', true);
+    };
+  </script>
+
+</body>
+</html>
