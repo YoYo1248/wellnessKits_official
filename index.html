@@ -7,6 +7,41 @@
   <meta name="description" content="WellnessKits: Science into daily practice. Small tools for a better life. Developed by Shuang.">
   <link rel="icon" type="image/png" href="./avatar.png">
   <link rel="stylesheet" href="./src/style.css">
+  <style>
+    .creator-note-card {
+      background: #f7f3ec;
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin: 0 auto 50px;
+      max-width: 680px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.015);
+    }
+    .creator-note-avatar {
+      width: 48px !important;
+      height: 48px !important;
+      border-radius: 50% !important;
+      object-fit: cover !important;
+      border: 2px solid #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 14px;
+    }
+    .creator-note-quote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--text-main);
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+    .creator-note-author {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--warm-sage);
+      letter-spacing: 0.2px;
+    }
+  </style>
 </head>
 <body>
 
@@ -39,8 +74,19 @@
     </div>
   </section>
 
+  <!-- Creator's Note Section -->
+  <div class="container">
+    <div class="creator-note-card">
+      <img src="./avatar.png" alt="Shuang" class="creator-note-avatar">
+      <p class="creator-note-quote">
+        “As an independent creator, my goal is simple: if my tools can make your day a little brighter or healthier, I couldn't be happier.”
+      </p>
+      <div class="creator-note-author">— Shuang, Creator of WellnessKits</div>
+    </div>
+  </div>
+
   <!-- Tools Section -->
-  <section class="section tools-section" id="tools">
+  <section class="section tools-section" id="tools" style="padding-top: 20px;">
     <div class="container">
       <div class="section-header">
         <h2>Tools</h2>

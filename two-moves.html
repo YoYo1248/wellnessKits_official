@@ -146,6 +146,40 @@
       line-height: 1.6;
     }
 
+    /* Creator Note Card */
+    .creator-note-card {
+      background: #f7f3ec;
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin: 0 auto 40px;
+      max-width: 660px;
+      text-align: center;
+    }
+    .creator-note-avatar {
+      width: 48px !important;
+      height: 48px !important;
+      border-radius: 50% !important;
+      object-fit: cover !important;
+      border: 2px solid #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 14px;
+    }
+    .creator-note-quote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.12rem;
+      color: var(--text-main);
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+    .creator-note-author {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--warm-sage);
+      letter-spacing: 0.2px;
+    }
+
     /* Support Form Card */
     .support-section-card {
       background: var(--bg-card);
@@ -204,7 +238,7 @@
         gap: 16px;
         margin: 24px 0 40px;
       }
-      .feature-card, .support-section-card {
+      .feature-card, .support-section-card, .creator-note-card {
         padding: 24px;
       }
     }
@@ -309,6 +343,17 @@
           <div class="feature-icon">🔒</div>
           <h3>Privacy-First</h3>
           <p>Your history, timers, and progress stay securely on your device. No ads, no cross-app tracking.</p>
+        </div>
+      </div>
+
+      <!-- Creator Note Card -->
+      <div class="container" style="max-width: 660px; padding: 0;">
+        <div class="creator-note-card">
+          <img src="./avatar.png" alt="Shuang" class="creator-note-avatar">
+          <p class="creator-note-quote">
+            “As an independent creator, my goal is simple: if my tools can make your day a little brighter or healthier, I couldn't be happier.”
+          </p>
+          <div class="creator-note-author">— Shuang, Creator of WellnessKits</div>
         </div>
       </div>
 
